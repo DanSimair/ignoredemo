@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Selectors</title>
+
+  <head>
+    <title>JSON</title>
+    <script>
+      window.onload = function clickyClick() {
+        const apiURL = 'https://swapi.co/api/films/';
+        console.log("pre-fetch");
+        fetch(apiURL)
+          .then(function (response) {
+            console.log("in response");
+            return response.json();
+          })
+          .then(function (data) {
+            console.log("in data");
+            data.results.forEach(element => {
+              let contentDiv = document.getElementById("content");
+              let nextDiv = document.createElement("div");
+              nextDiv.innerHTML = "title: " + element.title + "<br> episode_id: " + element.episode_id + "<br>release_date: " + element.release_date;
+              contentDiv.appendChild(nextDiv);
+            });
+          });
+      }
+
+/*
+        const apiURL = 'https://api.tvmaze.com/search/shows?q=batman';
+
+        fetch(apiURL)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+            console.log(data);
+          });
+      
+      */
+    </script>
+  </head>
+</head>
+
+<body>
+  <div id="content"></div>
+</body>
+
+</html>

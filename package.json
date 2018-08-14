@@ -1,0 +1,22 @@
+{
+  "name": "learning-code",
+  "version": "1.0.0",
+  "description": "Sample Package Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "uglify": "uglifyjs index.js --output script.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1",
+    "path": "^0.12.7",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.4.5"
+  }
+}
